@@ -1,0 +1,71 @@
+---
+version: 2
+sources:
+- name: "pedrofiadeiro.hsbc"
+  database: "pedrofiadeiro"
+  schema: "hsbc"
+  config:
+    enabled: true
+  tables:
+  - name: "d_department"
+    columns:
+    - name: "DDEPT_KEY"
+      dataType:
+        type: "Integer"
+    - name: "ID"
+      dataType:
+        type: "String"
+    - name: "AUX_SRC_EFF_FROM_DT"
+      dataType:
+        type: "Timestamp"
+    - name: "AUX_SRC_EFF_TO_DT"
+      dataType:
+        type: "Timestamp"
+    - name: "AUX_SRC_CUR_FLG"
+      dataType:
+        type: "TinyInt"
+    - name: "AUX_SRC_CHANGE_REASON"
+      dataType:
+        type: "String"
+    - name: "AUX_SRC_SYS"
+      dataType:
+        type: "TinyInt"
+    - name: "AUX_SRC_CRTD_BY"
+      dataType:
+        type: "String"
+    - name: "AUX_SRC_CRTD_DTM"
+      dataType:
+        type: "Timestamp"
+    - name: "AUX_SRC_UPD_BY"
+      dataType:
+        type: "String"
+    - name: "AUX_SRC_UPD_DTM"
+      dataType:
+        type: "Timestamp"
+    - name: "AUX_SRC_STATUS"
+      dataType:
+        type: "String"
+    - name: "AUX_EFF_FROM_DT"
+      dataType:
+        type: "Timestamp"
+    - name: "AUX_EFF_TO_DT"
+      dataType:
+        type: "Timestamp"
+    - name: "AUX_CUR_FLG"
+      dataType:
+        type: "TinyInt"
+    - name: "AUX_INS_DTM"
+      dataType:
+        type: "Timestamp"
+    - name: "AUX_BUS_DT"
+      dataType:
+        type: "Timestamp"
+    - name: "DEPT"
+      dataType:
+        type: "String"
+    - name: "DEPT_CD"
+      dataType:
+        type: "String"
+    - name: "DEPT_NAME"
+      dataType:
+        type: "String"

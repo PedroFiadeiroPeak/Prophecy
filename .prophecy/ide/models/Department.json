@@ -1,0 +1,733 @@
+{
+  "id" : "Department",
+  "metainfo" : {
+    "label" : "Department",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "d_department##aSi7WDwV" : {
+      "id" : "d_department##aSi7WDwV",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "d_department",
+        "x" : -120,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "d_department",
+          "sourceType" : "Source",
+          "sourceName" : "pedrofiadeiro.hsbc"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "cM6abyTR",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "DDEPT_KEY",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CHANGE_REASON",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_SYS",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_INS_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_BUS_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Department##T6vj1v7U" : {
+      "id" : "Department##T6vj1v7U",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Department",
+        "x" : 340,
+        "y" : 60,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM department_join\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V25bnOIs",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DDEPT_KEY",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CHANGE_REASON",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_SYS",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_INS_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_BUS_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPARTMENT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "department_join"
+        } ],
+        "outputs" : [ {
+          "id" : "rwgBYEYG",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DDEPT_KEY",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CHANGE_REASON",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_SYS",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_INS_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_BUS_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "5wJ0qLb6b78fYayU59lTV" : {
+      "id" : "5wJ0qLb6b78fYayU59lTV",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "Department_Lookup",
+        "slug" : "Department_Lookup",
+        "x" : -120,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "Department_Lookup",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "udMO5gOQA88rZQiZ_9Amr",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DEPARTMENT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "p2NIU0S-BrwAhDO9aXbCh$$XDEL3dzpOCMlF4X6Xhma8" : {
+      "id" : "p2NIU0S-BrwAhDO9aXbCh$$XDEL3dzpOCMlF4X6Xhma8",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "department_join",
+        "slug" : "department_join",
+        "x" : 60,
+        "y" : 60,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.DDEPT_KEY = in1.DEPARTMENT_ID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "Yz0dljmfuiupYGVcyWLPX$$8bTu0tUTu85Ao_knTlCXz##DDEPT_KEY", "QLPjdnVQ_xy9MoZq3ryvf$$17Sm8Y43jlSZ9lDKNWpcB##DEPARTMENT_ID" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Yz0dljmfuiupYGVcyWLPX$$8bTu0tUTu85Ao_knTlCXz",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "DDEPT_KEY",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CHANGE_REASON",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_SYS",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_INS_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_BUS_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "QLPjdnVQ_xy9MoZq3ryvf$$17Sm8Y43jlSZ9lDKNWpcB",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DEPARTMENT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "_JGOUIVKwgz7DjhiHFUiD$$ACAbC-PvpxWRlwaom1sPO",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DDEPT_KEY",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CHANGE_REASON",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_SYS",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_INS_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_BUS_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPARTMENT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ZGDMDLZ3LxQNB8tGcg_2v$$b72ZYBjBCkWkT3KmFGP9F",
+    "source" : "d_department##aSi7WDwV",
+    "sourcePort" : "cM6abyTR",
+    "target" : "p2NIU0S-BrwAhDO9aXbCh$$XDEL3dzpOCMlF4X6Xhma8",
+    "targetPort" : "Yz0dljmfuiupYGVcyWLPX$$8bTu0tUTu85Ao_knTlCXz"
+  }, {
+    "id" : "yAWEUrl99f2F6wlhjyxGf$$RpiH0lOc5LTbwQGv4yCsU",
+    "source" : "5wJ0qLb6b78fYayU59lTV",
+    "sourcePort" : "udMO5gOQA88rZQiZ_9Amr",
+    "target" : "p2NIU0S-BrwAhDO9aXbCh$$XDEL3dzpOCMlF4X6Xhma8",
+    "targetPort" : "QLPjdnVQ_xy9MoZq3ryvf$$17Sm8Y43jlSZ9lDKNWpcB"
+  }, {
+    "id" : "80ROHtkoQaxelJF0-2paV",
+    "source" : "p2NIU0S-BrwAhDO9aXbCh$$XDEL3dzpOCMlF4X6Xhma8",
+    "sourcePort" : "_JGOUIVKwgz7DjhiHFUiD$$ACAbC-PvpxWRlwaom1sPO",
+    "target" : "Department##T6vj1v7U",
+    "targetPort" : "V25bnOIs"
+  } ],
+  "component" : "Model"
+}

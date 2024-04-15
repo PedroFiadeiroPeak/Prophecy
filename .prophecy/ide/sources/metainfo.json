@@ -1,0 +1,547 @@
+{
+  "name" : "SQLProject",
+  "fileSystem" : {
+    "type" : "Folder",
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "providerType" : "databricks",
+  "fabricId" : "10736",
+  "prophecyIDEFolder" : {
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "externalSources" : {
+    "type" : "Project",
+    "name" : "",
+    "children" : [ {
+      "type" : "Catalog",
+      "name" : "davidhall_training",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "di_databrickssandbox",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "hive_metastore",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "john_snow_labs_restaurant_inspection_scores",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "pedrofiadeiro",
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "default",
+        "tables" : { }
+      }, {
+        "type" : "Schema",
+        "name" : "hsbc",
+        "tables" : {
+          "d_department" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DDEPT_KEY",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CHANGE_REASON",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_SYS",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_INS_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_BUS_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "department" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DDEPT_KEY",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CHANGE_REASON",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_SYS",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_CRTD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_BY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_SRC_UPD_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_SRC_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AUX_EFF_FROM_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_EFF_TO_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_CUR_FLG",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "AUX_INS_DTM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "AUX_BUS_DT",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "interims" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "interim",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "created_by",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "fabric_uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "run_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "component_runs" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "component_uri",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pipeline_uri",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pipeline_run_uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "fabric_uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "component_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "interim_component_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "component_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "interim_subgraph_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "interim_process_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "interim_out_port",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "created_by",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "records",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "bytes",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "partitions",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "expired",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "run_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "job_uri",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "branch",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "pipeline_runs" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pipeline_uri",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "job_uri",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "job_run_uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "task_run_uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "fabric_uid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "time_taken",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "rows_read",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "rows_written",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "created_by",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "run_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "input_datasets",
+              "dataType" : {
+                "type" : "Array",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }
+            }, {
+              "name" : "output_datasets",
+              "dataType" : {
+                "type" : "Array",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }
+            }, {
+              "name" : "workflow_code",
+              "dataType" : {
+                "type" : "Map",
+                "keyType" : {
+                  "type" : "String"
+                },
+                "valueType" : {
+                  "type" : "String"
+                }
+              }
+            }, {
+              "name" : "expired",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "branch",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pipeline_config",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "user_config",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "expected_interims",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "actual_interims",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "logs",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          }
+        }
+      }, {
+        "type" : "Schema",
+        "name" : "information_schema",
+        "children" : [ ]
+      } ]
+    }, {
+      "type" : "Catalog",
+      "name" : "samples",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "system",
+      "children" : [ ]
+    } ]
+  },
+  "dependenciesContainer" : {
+    "dependencies" : { },
+    "prophecyProjectDependencies" : { }
+  },
+  "sourcesToSync" : [ ],
+  "frontEndLanguage" : "sql"
+}
