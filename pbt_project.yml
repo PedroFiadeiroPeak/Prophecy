@@ -8,7 +8,30 @@ buildSystemDetails: null
 pipelines: {}
 datasets: {}
 templates: {}
-jobs: {}
+jobs:
+  jobs/MySQLJob:
+    name: MySQLJob
+    description: Test
+    fabricUID: 10736
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 45 16 * * ? *
+    timeout: null
+    alerting:
+      emails: pedro.fiadeiro@tpximpact.com
+      onStart: true
+      onSuccess: true
+      onFailure: true
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-04-15 15:26:43'
+    author: pedro.fiadeiro@tpximpact.com
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''

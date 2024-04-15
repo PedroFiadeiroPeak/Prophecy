@@ -1,0 +1,91 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "10736",
+    "jobId" : "jobs/MySQLJob",
+    "name" : "MySQLJob",
+    "schedule" : "0 45 16 * * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "prophecy_internal_jobs",
+    "alerting" : {
+      "emails" : "pedro.fiadeiro@tpximpact.com",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : true
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "10736",
+      "name" : "dev_fabric_sql",
+      "clusterSizes" : {
+        "default" : "prophecy_internal_jobs",
+        "availableClusterSizes" : [ "prophecy_internal_jobs" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "09z0HkUj0T62-9ZgmlDzR$$AqkW0xkFD57uWXssb9a3v" : {
+      "id" : "09z0HkUj0T62-9ZgmlDzR$$AqkW0xkFD57uWXssb9a3v",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : -440,
+        "y" : -200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TFEBlnrG-Cz75-F-n1ZSe$$_JQMWRuvjo8UvloSImgHC",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "Pbj-48i0pDd6XPqN8mbu3$$ijQfCn5Np28KbxdKyZP3y",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "execSeed" : true,
+        "execRun" : true,
+        "gitEntity" : "branch",
+        "projectId" : "22604",
+        "runOnlyModel" : "false",
+        "loadingModels" : false,
+        "profile" : "run_profile",
+        "sqlFabricId" : "10736",
+        "gitEntityValue" : "pedro",
+        "execDeps" : true,
+        "execTest" : false,
+        "currentProjectModels" : [ {
+          "label" : "Department",
+          "value" : "Department",
+          "id" : "22604/.prophecy/metadata/sqlmodels/Department",
+          "name" : "Department"
+        } ]
+      }
+    }
+  },
+  "connections" : [ ]
+}
